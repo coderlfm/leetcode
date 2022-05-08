@@ -16,7 +16,8 @@ function search(nums: number[], target: number): number {
 
   while (left <= right) {
     // (right - left / 2) 是为了在当前小分段取中位，+left 是为了保证在 右侧查找的时候 middle 的正确性
-    const middle = Math.floor(right - left / 2) + left;
+    // 例如 left: 20  right: 30 
+    const middle = Math.floor((right - left) / 2) + left;
 
     // 左边的都不满足
     if (nums[middle] < target) {
