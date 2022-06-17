@@ -12,7 +12,7 @@ function findPairs(nums: number[], k: number): number {
     // 如果map中有符合条件的值，并且不是自身
     if (mapVal.has(k + item) && mapVal.get(k + item) !== index) {
       // 去除同样条件的数对
-      if (!set.has(`${k},${item}`)) set.add(`${k},${item}`);
+      set.add(`${k},${item}`);
     }
   });
 
